@@ -1,0 +1,10 @@
+
+x: wercker/python
+  services:
+    - wercker/postgresql
+  build:
+    steps:
+      - script:
+          name: test
+          code: |
+            python manage.py test wercksdemo -v2
